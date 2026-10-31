@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Administración futura — BryTech</title>
+  <link rel="icon" href="assets/logo/Logo_BryTech.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,600;0,9..40,700;0,9..40,800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="admin">
+  <div id="app-header"></div>
+  <main id="contenido">
+    <div class="page-hero">
+      <div class="container">
+        <p class="eyebrow">RF08 · RF09 · RF10</p>
+        <h1>Panel administrativo (preparación)</h1>
+        <p class="muted">Esta página documenta el futuro backoffice. No es un sistema conectado a base de datos ni permite editar el catálogo real.</p>
+      </div>
+    </div>
+    <div class="container" style="padding:32px 0 64px">
+      <div class="alert alert-warn">
+        No hay autenticación administrativa. Cualquier acción de escritura deberá quedar protegida en Spring Boot con roles (por ejemplo ROLE_ADMIN).
+      </div>
+      <section>
+        <h2>Catálogo de demostración actual</h2>
+        <p class="muted">Vista de solo lectura de los datos centralizados en <code>js/data.js</code>.</p>
+        <div style="overflow:auto">
+          <table class="admin-table">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Categoría</th>
+                <th>Precio demo</th>
+                <th>Variantes</th>
+                <th>Existencias</th>
+              </tr>
+            </thead>
+            <tbody id="admin-productos"></tbody>
+          </table>
+        </div>
+      </section>
+      <section>
+        <h2>Qué implementará el panel real</h2>
+        <div class="benefit-grid">
+          <article class="benefit-card">
+            <h3>Productos</h3>
+            <p class="muted">Crear, editar, publicar o desactivar, actualizar precios y asociar fotografías.</p>
+          </article>
+          <article class="benefit-card">
+            <h3>Variantes</h3>
+            <p class="muted">Gestionar color, SKU, imágenes específicas y existencias por variante.</p>
+          </article>
+          <article class="benefit-card">
+            <h3>Inventario</h3>
+            <p class="muted">Consultar stock, impedir ventas por encima de lo disponible y marcar agotados.</p>
+          </article>
+          <article class="benefit-card">
+            <h3>Pedidos</h3>
+            <p class="muted">Ver cliente, líneas, total, fecha y transicionar estados de forma auditada.</p>
+          </article>
+        </div>
+      </section>
+    </div>
+  </main>
+  <div id="app-footer"></div>
+  <script src="js/data.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

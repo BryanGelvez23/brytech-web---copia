@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cuenta — BryTech</title>
+  <link rel="icon" href="assets/logo/Logo_BryTech.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,600;0,9..40,700;0,9..40,800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="cuenta">
+  <div id="app-header"></div>
+  <main id="contenido">
+    <div class="page-hero">
+      <div class="container">
+        <p class="eyebrow">RF11</p>
+        <h1>Registro e inicio de sesión</h1>
+        <p class="muted">Interfaz preparada. No hay autenticación real ni almacenamiento de contraseñas.</p>
+      </div>
+    </div>
+    <div class="container two-col" style="padding:32px 0 64px">
+      <section class="panel" style="padding:24px">
+        <h2>Iniciar sesión</h2>
+        <p class="muted">En producción, el servidor validará credenciales, emitirá una sesión segura y nunca devolverá el hash de la contraseña al navegador.</p>
+        <form class="form" id="form-login">
+          <div id="login-mensaje"></div>
+          <label>Correo
+            <input type="email" autocomplete="username" required>
+          </label>
+          <label>Contraseña
+            <input type="password" autocomplete="current-password" required>
+          </label>
+          <button class="btn btn-primary" type="submit">Intentar inicio de sesión</button>
+        </form>
+      </section>
+      <section class="panel" style="padding:24px">
+        <h2>Crear cuenta</h2>
+        <p class="muted">El registro real usará <code>POST /api/auth/registro</code>, cifrado de contraseñas (BCrypt) y validación de correo en el backend.</p>
+        <form class="form" id="form-registro">
+          <div id="registro-mensaje"></div>
+          <label>Nombre
+            <input type="text" autocomplete="name" required>
+          </label>
+          <label>Correo
+            <input type="email" autocomplete="email" required>
+          </label>
+          <label>Contraseña
+            <input type="password" autocomplete="new-password" required>
+          </label>
+          <button class="btn btn-primary" type="submit">Intentar registro</button>
+        </form>
+      </section>
+    </div>
+  </main>
+  <div id="app-footer"></div>
+  <script src="js/data.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Checkout de demostración — BryTech</title>
+  <link rel="icon" href="assets/logo/Logo_BryTech.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,600;0,9..40,700;0,9..40,800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="checkout">
+  <div id="app-header"></div>
+  <main id="contenido">
+    <div class="page-hero">
+      <div class="container">
+        <p class="eyebrow">RF06</p>
+        <h1>Checkout de demostración</h1>
+        <p class="muted">Este formulario no registra un pedido en un servidor. La simulación queda solo en la sesión del navegador.</p>
+      </div>
+    </div>
+    <div class="container two-col" style="padding:32px 0 64px">
+      <div>
+        <div id="checkout-vacio" class="empty-state" hidden>
+          <h2>No hay productos para pagar</h2>
+          <p>Agrega artículos al carrito antes de simular un pedido.</p>
+          <a class="btn btn-primary" href="catalogo.html">Ir al catálogo</a>
+        </div>
+        <div id="checkout-exito" hidden>
+          <div class="alert alert-ok">
+            Simulación local completada. El pedido no se registró en un servidor ni reservó inventario.
+          </div>
+          <p>Identificador de demostración: <strong class="mono" id="pedido-id-demo"></strong></p>
+          <p>Puedes consultarlo en esta misma sesión desde la página de estado del pedido. Al cerrar la pestaña, los datos de sesión pueden desaparecer.</p>
+          <p>Conexión futura: <code>POST /api/pedidos</code> en Spring Boot validaría cliente, precios e inventario en el servidor.</p>
+          <a class="btn btn-primary" href="pedido.html">Consultar pedido</a>
+        </div>
+        <form class="form" id="form-checkout">
+          <div id="checkout-mensaje"></div>
+          <label>Nombre completo
+            <input id="nombre" name="nombre" autocomplete="name" required>
+            <span class="error" id="error-nombre"></span>
+          </label>
+          <label>Teléfono
+            <input id="telefono" name="telefono" inputmode="numeric" autocomplete="tel" required>
+            <span class="error" id="error-telefono"></span>
+          </label>
+          <label>Ciudad
+            <input id="ciudad" name="ciudad" autocomplete="address-level2" required>
+            <span class="error" id="error-ciudad"></span>
+          </label>
+          <label>Método de entrega
+            <select id="entrega" required>
+              <option value="">Selecciona una opción</option>
+              <option value="recogida">Recogida (por coordinar)</option>
+              <option value="domicilio">Domicilio (por coordinar)</option>
+            </select>
+            <span class="error" id="error-entrega"></span>
+          </label>
+          <label id="campo-direccion" hidden>Dirección
+            <input id="direccion" name="direccion" autocomplete="street-address">
+            <span class="error" id="error-direccion"></span>
+          </label>
+          <label>Observaciones (opcional)
+            <textarea id="observaciones" rows="3" maxlength="500"></textarea>
+          </label>
+          <p class="muted">No indiques datos de tarjetas ni contraseñas. Este prototipo no procesa pagos.</p>
+          <button class="btn btn-primary" type="submit">Simular pedido local</button>
+        </form>
+      </div>
+      <aside class="summary">
+        <h2>Tu selección</h2>
+        <ul id="checkout-resumen"></ul>
+      </aside>
+    </div>
+  </main>
+  <div id="app-footer"></div>
+  <script src="js/data.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BryTech — Potencia accesible. Calidad real.</title>
+  <meta name="description" content="BryTech, tienda de tecnología y accesorios en Cúcuta. Potencia accesible. Calidad real.">
+  <link rel="icon" href="assets/logo/Logo_BryTech.jpg">
+  <!-- Las fuentes (Space Grotesk y Manrope) se cargan desde styles.css -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="inicio">
+  <div id="app-header"></div>
+  <main id="contenido">
+
+    <!-- Héroe -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <p class="eyebrow">BryTech · Cúcuta</p>
+          <h1>Tecnología clara, útil y al alcance.</h1>
+          <p class="lema">Potencia accesible. Calidad real.</p>
+          <p class="hero-text">Audífonos, mouse, teclados, mandos y accesorios para estudio, oficina, hogar y entretenimiento.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="catalogo.html">Ver catálogo</a>
+            <a class="btn btn-ghost" href="https://wa.me/573178385428" target="_blank" rel="noopener noreferrer">Escribir por WhatsApp</a>
+          </div>
+        </div>
+        <!-- Foto real destacada: la inserta app.js. Si está vacío, se oculta. -->
+        <div class="hero-media" id="hero-media"></div>
+      </div>
+    </section>
+
+    <!-- Categorías -->
+    <section>
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Categorías</p>
+            <h2>Encuentra lo que necesitas</h2>
+          </div>
+          <a class="btn btn-ghost" href="catalogo.html">Ver todo el catálogo</a>
+        </div>
+        <div class="category-grid" id="categorias-destacadas"></div>
+      </div>
+    </section>
+
+    <!-- Productos destacados -->
+    <section class="section-alt">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Selección</p>
+            <h2>Productos destacados</h2>
+            <p class="muted">Los precios son de demostración mientras se confirma la tarifa comercial.</p>
+          </div>
+          <a class="btn btn-ghost" href="catalogo.html">Ver todos</a>
+        </div>
+        <div class="product-grid" id="productos-destacados"></div>
+      </div>
+    </section>
+
+    <!-- Banda gaming: la llena app.js con un producto gaming; se oculta si está vacía -->
+    <section class="gaming-band">
+      <div class="container" id="banda-gaming"></div>
+    </section>
+
+    <!-- Confianza: solo hechos verificables -->
+    <section>
+      <div class="container trust-layout">
+        <div class="trust-intro">
+          <p class="eyebrow">BryTech</p>
+          <h2>Hablemos antes de comprar</h2>
+          <p class="muted">Somos una tienda de Cúcuta. Si tienes dudas sobre un producto, escríbenos y te ayudamos a elegir.</p>
+          <a class="btn btn-whatsapp" href="https://wa.me/573178385428" target="_blank" rel="noopener noreferrer">Escribir por WhatsApp</a>
+        </div>
+        <ul class="trust-list">
+          <li class="trust-item">
+            <span class="trust-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.1-3.1a2 2 0 0 0-2.8 0L6 21"/></svg>
+            </span>
+            <div>
+              <h3>Fotos reales de los productos</h3>
+              <p>Las imágenes son de los productos de BryTech, no de bancos de imágenes.</p>
+            </div>
+          </li>
+          <li class="trust-item">
+            <span class="trust-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>
+            </span>
+            <div>
+              <h3>Atención directa</h3>
+              <p>WhatsApp 317 838 5428 e Instagram <a href="https://www.instagram.com/brytech.co/" target="_blank" rel="noopener noreferrer">@BryTech.co</a>.</p>
+            </div>
+          </li>
+          <li class="trust-item">
+            <span class="trust-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12.6 2.6A2 2 0 0 0 11.2 2H4a2 2 0 0 0-2 2v7.2a2 2 0 0 0 .6 1.4l8.7 8.7a2.4 2.4 0 0 0 3.4 0l6.6-6.6a2.4 2.4 0 0 0 0-3.4z"/><circle cx="7.5" cy="7.5" r=".5" fill="currentColor"/></svg>
+            </span>
+            <div>
+              <h3>Precios en pesos colombianos</h3>
+              <p>Todos los valores se muestran en COP.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+  </main>
+  <div id="app-footer"></div>
+  <script src="js/data.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

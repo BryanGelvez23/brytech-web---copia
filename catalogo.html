@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Catálogo — BryTech</title>
+  <link rel="icon" href="assets/logo/Logo_BryTech.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,600;0,9..40,700;0,9..40,800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="catalogo">
+  <div id="app-header"></div>
+  <main id="contenido">
+    <div class="page-hero">
+      <div class="container">
+        <p class="eyebrow">RF02 · RF03</p>
+        <h1>Catálogo</h1>
+        <p class="muted">Busca por nombre, filtra por categoría o precio y ordena los resultados. Los importes son de demostración.</p>
+      </div>
+    </div>
+    <div class="container" style="padding:28px 0 64px">
+      <form class="filters" id="form-filtros" onsubmit="return false">
+        <label>Buscar
+          <input id="filtro-q" type="search" placeholder="Nombre del producto">
+        </label>
+        <label>Categoría
+          <select id="filtro-categoria"></select>
+        </label>
+        <label>Precio mínimo (COP)
+          <input id="filtro-min" type="number" min="0" step="1000" placeholder="Ej. 50000">
+        </label>
+        <label>Precio máximo (COP)
+          <input id="filtro-max" type="number" min="0" step="1000" placeholder="Ej. 200000">
+        </label>
+        <label>Ordenar
+          <select id="filtro-orden">
+            <option value="relevancia">Destacados primero</option>
+            <option value="precio-asc">Precio: menor a mayor</option>
+            <option value="precio-desc">Precio: mayor a menor</option>
+            <option value="nombre">Nombre A-Z</option>
+          </select>
+        </label>
+        <button class="btn btn-ghost" type="button" id="limpiar-filtros">Limpiar filtros</button>
+      </form>
+      <div class="results-meta">
+        <p id="catalogo-meta" class="muted"></p>
+        <a href="catalogo.html">Mostrar todos</a>
+      </div>
+      <div class="product-grid" id="catalogo-grid"></div>
+      <div class="empty-state" id="catalogo-vacio" hidden>
+        <h2>No hay resultados</h2>
+        <p>Prueba con otro nombre, otra categoría o un rango de precio distinto.</p>
+      </div>
+    </div>
+  </main>
+  <div id="app-footer"></div>
+  <script src="js/data.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
